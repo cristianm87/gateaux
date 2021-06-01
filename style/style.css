@@ -1,0 +1,317 @@
+@font-face {
+  src: url(../fonts/LeckerliOne-Regular.ttf);
+  font-family: "Lecker";
+}
+
+:root {
+  font-size: 18px;
+  --logo-text-color: rgb(216 64 136);
+}
+
+@media screen and (max-width: 425px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0px;
+  padding-bottom: 0px 0px 50px 0px;
+}
+
+.container {
+  display: block;
+  margin: auto;
+  max-width: 1300px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.container-bg-img {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-image: url(../images/background.jpeg);
+  background-size: 50%;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+h1 {
+  font-family: "Lecker";
+  color: var(--logo-text-color);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Libre Baskerville", serif;
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0;
+}
+
+/* IMAGE LOGO */
+
+.section-logo {
+  background-color: rgb(85 186 169);
+}
+
+.img-logo {
+  display: block;
+  margin: auto;
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 425px) {
+  .img-logo {
+    width: 100%;
+  }
+}
+
+/* NAVIGATION MENU */
+
+.navigation {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: rgb(85 186 169);
+  z-index: 20;
+  display: flex;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.navigation-bg-color {
+  background-color: rgba(255, 255, 255, 0.904);
+}
+
+.navigation-lg {
+  height: 50px;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.navigation .container {
+  width: 100%;
+  position: relative;
+}
+
+.navigation-brand {
+  font-family: "Lecker";
+  font-size: 1.1rem;
+}
+
+.navigation-brand-display {
+  display: none;
+}
+
+.navigation-brand-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+.navigation-brand-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.navigation-brand-lg {
+  position: absolute;
+  left: 15px;
+  padding: 0.5rem 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.navigation-brand a {
+  text-decoration: none;
+  color: var(--logo-text-color);
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.navigation ul li a {
+  margin: 2rem;
+  text-decoration: none;
+  color: rgb(43, 43, 43);
+}
+
+@media screen and (max-width: 500px) {
+  .navigation ul li a {
+    margin: 0.5rem;
+  }
+}
+
+.navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+/* IMAGE COVER */
+
+.img-cover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  position: absolute;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.img-cover {
+  position: relative;
+}
+
+.img-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 600px;
+  width: 100%;
+  background-image: url(../images/portada.jpeg);
+  background-size: cover;
+}
+
+.img-cover-text-wraper {
+  width: 500px;
+  z-index: 10;
+}
+
+.img-cover-text-wraper > p {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 930px) {
+  .img-cover {
+    background-position: center;
+  }
+}
+
+/* IMAGE GALLERY */
+
+.img-gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.img-gallery > .img-gallery-wraper {
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-gallery > .img-gallery-wraper img {
+  width: 200px;
+  padding: 20px;
+  transition: 1s;
+}
+
+@media screen and (max-width: 515px) {
+  .img-gallery > .img-gallery-wraper img {
+    width: 290px;
+    padding: 10px 0px 10px 0px;
+  }
+}
+
+.img-gallery > .img-gallery-wraper img:hover {
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}
+
+/* MENU DE PRODUCTOS */
+
+dl {
+  font-family: "Open Sans", sans-serif;
+}
+
+dl > dt {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+dl > dd {
+  margin: 0;
+}
+
+/* CONTACTO */
+
+.container-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 2rem;
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+}
+
+.contact p {
+  margin: 1rem;
+}
+.contact a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact-i-color-wp {
+  color: #6ac56e;
+}
+.contact-i-color-email {
+  color: #519afa;
+}
+
+.contact-i-color-ig {
+  color: #bb1892;
+}
+
+.contact-i-color-fb {
+  color: rgb(41, 160, 207);
+}
+
+/* FOOTER */
+
+footer {
+  background-color: rgb(236, 236, 236);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+footer p {
+  padding: 14px;
+}
